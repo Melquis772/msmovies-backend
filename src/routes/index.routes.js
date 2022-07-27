@@ -5,7 +5,7 @@ const router = Router();
 
 
 
-router.get('/hero-slide', movie.heroSlide);
+router.get('https://msmoviesapi.herokuapp.com/hero-slide', movie.heroSlide);
 
 router.get('/videos-list/:id', movie.getVideoListTrailer)
 
@@ -33,7 +33,7 @@ router.get('/movies-similar/:category/:id', movie.getMoviesBySimilar)
 
 router.get('/videos/:category/:id', movie.getVideosList)
 
-router.get('/detail/:category/:id', movie.getDetail)
+router.get('https://msmoviesapi.herokuapp.com/detail/:category/:id', movie.getDetail)
 
 router.get('/credits/:category/:id', movie.getCredits)
 
