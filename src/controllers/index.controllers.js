@@ -21,10 +21,9 @@ const tvType = {
 }
 
 
-
 const heroSlide = async (req, res) => {
     try {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${movieType.upcoming}?api_key=${config.API_KEY}`)
+        const response = await fetch(`${config.BASE_URL}/movie/${movieType.upcoming}?api_key=${config.API_KEY}`)
 
         const data = await response.json()
 
