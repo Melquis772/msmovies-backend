@@ -22,8 +22,9 @@ const tvType = {
 
 
 const heroSlide = async (req, res) => {
+    const { page } = req.params
     try {
-        const response = await fetch(`${config.BASE_URL}/movie/${movieType.upcoming}?api_key=${config.API_KEY}`)
+        const response = await fetch(`${config.BASE_URL}/movie/${movieType.upcoming}?api_key=${config.API_KEY}&page=${page}`)
 
         const data = await response.json()
 
@@ -55,7 +56,7 @@ const getVideoListTrailer = async (req, res) => {
 const getMoviesList = async (req, res) => {
 
     try {
-        const response = await fetch(`${config.BASE_URL}/movie/${movieType.upcoming}?api_key=${config.API_KEY}`)
+        const response = await fetch(`${config.BASE_URL}/movie/${movieType.popular}?api_key=${config.API_KEY}`)
         const data = await response.json();
 
         res.status(200).json(data)

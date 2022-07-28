@@ -5,7 +5,7 @@ const router = Router();
 
 
 
-router.get('/hero-slide', movie.heroSlide);
+router.get('/hero-slide/:page', movie.heroSlide);
 
 router.get('/videos-list/:id', movie.getVideoListTrailer)
 
